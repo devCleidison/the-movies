@@ -1,0 +1,121 @@
+nav {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  margin-top: var(--nav-height);
+
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+
+  background-color: var(--gray);
+  font-size: 2rem;
+}
+
+nav.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin-top: var(--nav-height);
+
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+
+  background-color: var(--gray);
+
+  font-size: 2rem;
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding-top: 5rem;
+}
+
+nav form input {
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: 1px solid var(--yellow);
+}
+
+#btn-search {
+  position: initial;
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 1rem;
+  transition: 300ms;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+nav form button:hover {
+  background-color: var(--yellow-hover);
+}
+
+nav form input,
+nav form button {
+  border-radius: 0.8rem;
+}
+
+@media (min-width: 990px) {
+  nav,
+  nav.show {
+    position: initial;
+    top: initial;
+    left: initial;
+    margin: initial;
+    padding: initial;
+    width: initial;
+    height: initial;
+    font-size: initial;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+    gap: 5rem;
+  }
+
+  nav a:hover,
+  nav.show a:hover {
+    transition: 300ms;
+    color: var(--yellow-hover);
+  }
+
+  nav form input,
+  nav.show form input {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    border: 1px solid var(--yellow);
+  }
+
+  nav form {
+    padding-top: initial;
+  }
+
+  #btn-search {
+    padding: 0.8rem;
+    font-size: 1.8rem;
+  }
+
+  #btn-search:hover {
+    background-color: var(--yellow-hover);
+  }
+}

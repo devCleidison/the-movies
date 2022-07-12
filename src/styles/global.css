@@ -1,0 +1,97 @@
+:root {
+  --font: "Roboto", sans-serif;
+
+  --hue: 44;
+  --black: hsl(0, 0%, 10%);
+  --white: hsl(0, 0%, 90%);
+  --gray: hsl(0, 0%, 13%);
+  --yellow: hsl(var(--hue), 100%, 60%);
+  --yellow-hover: hsl(var(--hue), 100%, 42%);
+
+  --nav-height: 9vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 1.6rem;
+  -webkif-font-smoothing: antialiased;
+
+  color: var(--white);
+  background-color: var(--black);
+}
+
+h1,
+h2,
+h3,
+a {
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a,
+button,
+input {
+  font-family: var(--font);
+}
+
+.button {
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  min-width: 37.5rem;
+
+  padding-top: var(--nav-height);
+}
+
+.container {
+  width: 100%;
+  max-width: 130rem;
+  padding-inline: 2rem;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.content h3 span {
+  color: var(--yellow);
+}
+.content-movies {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 30rem));
+  gap: 2rem;
+  place-content: center;
+
+  padding-block: 3rem 6rem;
+}

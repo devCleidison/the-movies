@@ -1,0 +1,45 @@
+.info-container {
+  max-width: 45rem;
+  margin: 2rem auto 10rem;
+}
+
+.info-container img {
+  width: 100%;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-content h2 {
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+.tagline {
+  text-align: center;
+  margin: -1rem 0 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info h3 svg {
+  color: var(--yellow);
+}
+
+.description {
+  line-height: 140%;
+  text-align: justify;
+}
