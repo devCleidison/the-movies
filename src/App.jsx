@@ -17,8 +17,6 @@ function App() {
 
     if (body.offsetWidth > 990) return;
 
-    console.log(body.offsetWidth);
-
     if (isShowMenu) {
       body.style.overflow = "initial";
       nav.classList.remove("show");

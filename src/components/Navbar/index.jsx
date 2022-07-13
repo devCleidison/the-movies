@@ -13,7 +13,7 @@ export const Navbar = ({ handleMenu }) => {
 
     if (!search) return;
 
-    navigate(`/search?q=${search}`);
+    navigate(`search?q=${search}`);
     setSearch("");
     handleMenu();
   };

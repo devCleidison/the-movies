@@ -11,6 +11,7 @@ export const Search = () => {
   const query = searchParams.get("q");
 
   const searchWithQueryUrl = `${searchURL}?${apiKey}&query=${query}`;
+
   const {
     dataResults: movies,
     error,

@@ -12,6 +12,27 @@ export const useMovies = (url, category) => {
   const [error, setError] = useState("");
   const [categotyMovie, setCategoryMovie] = useState("");
 
+  console.log(url, category);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        setDataMovie(data);
+        setDataResults(data.results);
+        setPageId(data.page);
+        setTotalPages(data.total_pages);
+        setCategoryMovie(category);
+      } catch (err) {
+        setError("Houve um erro ao buscar os dados");
+      }
+    };
+
+    fetchData();
+  }, [url]);
+
   const customPagination = async (page, pageCategory) => {
     let customPaginationUrl = null;
     let res = null;
@@ -32,25 +53,6 @@ export const useMovies = (url, category) => {
     setPageId(data.page);
     setTotalPages(data.total_pages);
   };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(url);
-        const data = await res.json();
-
-        setDataMovie(data);
-        setDataResults(data.results);
-        setPageId(data.page);
-        setTotalPages(data.total_pages);
-        setCategoryMovie(category);
-      } catch (err) {
-        setError("Houve um erro ao buscar os dados");
-      }
-    };
-
-    fetchData();
-  }, [url]);
 
   return {
     dataResults,
