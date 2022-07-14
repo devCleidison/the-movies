@@ -1,10 +1,15 @@
 .info-container {
-  max-width: 45rem;
-  margin: 2rem auto 10rem;
+  margin: 5rem auto 7rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .info-container img {
   width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
 }
 
 .info-content {
@@ -42,4 +47,15 @@
 .description {
   line-height: 140%;
   text-align: justify;
+
+  max-width: 60rem;
+}
+
+@media (min-width: 990px) {
+  .info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 4rem;
+  }
 }
